@@ -24,7 +24,7 @@ function SignUp() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/api/auth/signup",
+        "http://localhost:3002/api/auth/signup",
         { ...inputValue }
       );
       const { success, message } = data;

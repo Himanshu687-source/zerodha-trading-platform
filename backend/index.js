@@ -203,6 +203,10 @@ app.use(express.urlencoded({extended: false}))
 
 
 
+app.get('/', (req, res) => {
+    res.send("Zerodha Clone Backend API Server is running! Try /allHoldings or /allPositions.");
+});
+
 app.get('/allHoldings',async(req,res)=>{
     allHoldings=await HoldingsModel.find({});
     res.json(allHoldings);
@@ -235,6 +239,15 @@ app.get("/api/auth/user", verfiyToken, getUser);
 
 app.listen(PORT,()=>{
      console.log(`App started at port! ${PORT}`);
-     mongoose.connect(uri);
-     console.log("DB connected!");
+     if (!uri) {
+         console.warn("WARNING: MONGO_URL is not defined. DB functionality will be unavailable.");
+     } else {
+         mongoose.connect(uri)
+             .then(() => {
+                 console.log("DB connected!");
+             })
+             .catch(err => {
+                 console.error("WARNING: Could not connect to MongoDB. DB functionality will be unavailable.", err.message);
+             });
+     }
  });
