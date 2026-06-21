@@ -76,8 +76,9 @@ const signInController = async (req, res) => {
         }
 
         const options = {
-            secure: false,
+            secure: process.env.NODE_ENV === "production",
             httpOnly: true,
+            sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
             maxAge: 900000
         }
         return res.status(200).cookie("token", token, options).json({ message: "User login successfully!", success: true });

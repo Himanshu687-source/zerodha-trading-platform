@@ -22,8 +22,19 @@ const uri=process.env.MONGO_URL;
 const app=express();
 
 app.use(cookieParser());
+const allowedOrigins = process.env.ALLOWED_ORIGINS
+    ? process.env.ALLOWED_ORIGINS.split(",")
+    : ["http://localhost:3000", "http://localhost:3001"];
+
 app.use(cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"]
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true
 }));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}))

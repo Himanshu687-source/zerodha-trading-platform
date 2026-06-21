@@ -29,8 +29,10 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const apiBaseUrl = process.env.REACT_APP_API_URL || "http://localhost:3002";
+      const dashboardUrl = process.env.REACT_APP_DASHBOARD_URL || "http://localhost:3001/";
       const { data } = await axios.post(
-        "http://localhost:3002/api/auth/signin",
+        `${apiBaseUrl}/api/auth/signin`,
         {
           ...inputValue,
         }
@@ -40,7 +42,7 @@ const Login = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "http://localhost:3001/"
+          window.location.href = dashboardUrl;
         }, 1000);
       } else {
         alert(message)

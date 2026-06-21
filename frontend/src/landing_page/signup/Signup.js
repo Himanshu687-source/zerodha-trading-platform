@@ -23,14 +23,15 @@ function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const apiBaseUrl = process.env.REACT_APP_API_URL || "http://localhost:3002";
       const { data } = await axios.post(
-        "http://localhost:3002/api/auth/signup",
+        `${apiBaseUrl}/api/auth/signup`,
         { ...inputValue }
       );
       const { success, message } = data;
       if (success) {
         setTimeout(() => {
-          window.location.href = "http://localhost:3000/login";
+          window.location.href = "/login";
         }, 1000);
       } else {
         alert(message);
