@@ -19,6 +19,18 @@ const { signUpController, signInController, getUser } = require('./model/UserMod
 const PORT=process.env.PORT || 3002;
 const uri=process.env.MONGO_URL;
 
+if (!uri) {
+    console.warn("WARNING: MONGO_URL is not defined. DB functionality will be unavailable.");
+} else {
+    mongoose.connect(uri)
+        .then(() => {
+            console.log("DB connected!");
+        })
+        .catch(err => {
+            console.error("WARNING: Could not connect to MongoDB. DB functionality will be unavailable.", err.message);
+        });
+}
+
 const app=express();
 
 app.use(cookieParser());
@@ -250,15 +262,6 @@ app.get("/api/auth/user", verfiyToken, getUser);
 
 app.listen(PORT,()=>{
      console.log(`App started at port! ${PORT}`);
-     if (!uri) {
-         console.warn("WARNING: MONGO_URL is not defined. DB functionality will be unavailable.");
-     } else {
-         mongoose.connect(uri)
-             .then(() => {
-                 console.log("DB connected!");
-             })
-             .catch(err => {
-                 console.error("WARNING: Could not connect to MongoDB. DB functionality will be unavailable.", err.message);
-             });
-     }
  });
+
+module.exports = app;
