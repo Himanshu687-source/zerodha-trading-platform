@@ -7,14 +7,14 @@ function Footer() {
 
         <div className='container border-top mt-5' >
             <div className='row mt-5'>
-                <div className='col'> 
-                    <img src="media/images/logo.svg" style={{width:"50%"}} />
-                    <p>
+                <div className='col-12 col-sm-6 col-md-3 mb-4'> 
+                    <img src="media/images/logo.svg" style={{width:"150px"}} alt="logo" />
+                    <p className="mt-3">
                         &copy;2010-2024, Not Zerodha Broking Ltd. All rights reserved.
                     </p>
                 </div>
-                <div className='col'>
-                 <p>Company</p> 
+                <div className='col-12 col-sm-6 col-md-3 mb-4'>
+                 <p className="fw-bold">Company</p> 
                    <a href="" style={{textDecoration:"none"}}> About</a><br/>
                    <a href="" style={{textDecoration:"none"}}>Products</a><br/>
                    <a href="" style={{textDecoration:"none"}}>Pricing</a><br/>
@@ -24,16 +24,16 @@ function Footer() {
                    <a href="" style={{textDecoration:"none"}}>Press & media</a><br/>
                    <a href="" style={{textDecoration:"none"}}>Zerodha cares(CSR)</a><br/>
                 </div>
-                <div className='col'>
-                <p>Support</p>
+                <div className='col-12 col-sm-6 col-md-3 mb-4'>
+                <p className="fw-bold">Support</p>
                    <a href="" style={{textDecoration:"none"}}>Contact </a><br/>
                    <a href="" style={{textDecoration:"none"}}>Support portal</a><br/>
                    <a href="" style={{textDecoration:"none"}}>Z-connect blog</a><br/>
                    <a href="" style={{textDecoration:"none"}}>List of charges</a><br/>
                    <a href="" style={{textDecoration:"none"}}>Downloads & resoures</a><br/>      
                 </div>
-                <div className='col'>
-                    <p>Account</p> 
+                <div className='col-12 col-sm-6 col-md-3 mb-4'>
+                    <p className="fw-bold">Account</p> 
                     <a href="" style={{textDecoration:"none"}}>Open an account</a><br/>
                    <a href="" style={{textDecoration:"none"}}>Fund transfer</a><br/>
                    <a href="" style={{textDecoration:"none"}}>60 day challenge</a><br/>     

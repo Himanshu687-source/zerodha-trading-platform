@@ -5,7 +5,7 @@ function CreateTicket() {
         <div className='container'>
             <div className='row p-5 mt-5 mb-5'>
                 <h1 className='fs-2'>To create a ticket, select a relevant topic</h1>
-              <div className='col-4 p-5 mt-2 mb-2'>
+              <div className='col-12 col-sm-6 col-md-4 p-3 p-md-5 mt-2 mb-2'>
                 <h4 className=''> <i class="fa fa-plus-circle" aria-hidden="true"></i> Account Opening</h4>
                  <a href="#" style={{textDecoration:"none",lineHeight:"2.5"}}>Online Account Opening </a><br/>
                  <a href="#" style={{textDecoration:"none",lineHeight:"2.5"}}>Offine Account Opening </a><br/>
@@ -18,7 +18,7 @@ function CreateTicket() {
 
               </div>
 
-               <div className='col-4 p-5 mt-2 mb-2'>
+               <div className='col-12 col-sm-6 col-md-4 p-3 p-md-5 mt-2 mb-2'>
                 <h4 className=''> <i class="fa-solid fa-circle-user" aria-hidden="true"></i> Your Zerodha Account </h4>
                  <a href="#" style={{textDecoration:"none",lineHeight:"2.5"}}>Login Credentials  </a><br/>
                  <a href="#" style={{textDecoration:"none",lineHeight:"2.5"}}>Account Modification and Addition  </a><br/>
@@ -28,7 +28,7 @@ function CreateTicket() {
                 
               </div>
 
-               <div className='col-4 p-5 mt-2 mb-2'>
+               <div className='col-12 col-sm-6 col-md-4 p-3 p-md-5 mt-2 mb-2'>
                 <h4 className=''> <i class="fa-solid fa-chart-simple" aria-hidden="true"></i> Your Zerodha Account</h4>
                  <a href="#" style={{textDecoration:"none",lineHeight:"2.5"}}>Margin/leverage,Product and Order types</a><br/>
                  <a href="#" style={{textDecoration:"none",lineHeight:"2.5"}}>Kite Web and Mobile</a><br/>
@@ -42,7 +42,7 @@ function CreateTicket() {
                 
               </div>
 
-               <div className='col-4 p-5 mt-2 mb-2'>
+               <div className='col-12 col-sm-6 col-md-4 p-3 p-md-5 mt-2 mb-2'>
                 <h4 className=''> <i class="fa-solid fa-money-check" aria-hidden="true"></i> Funds</h4>
                  <a href="#" style={{textDecoration:"none",lineHeight:"2.5"}}>Adding Funds</a><br/>
                  <a href="#" style={{textDecoration:"none",lineHeight:"2.5"}}>Fund Withdrawal</a><br/>
@@ -52,7 +52,7 @@ function CreateTicket() {
 
               </div>
 
-               <div className='col-4 p-5 mt-2 mb-2'>
+               <div className='col-12 col-sm-6 col-md-4 p-3 p-md-5 mt-2 mb-2'>
                 <h4 className=''> <i class="fa-solid fa-circle-notch" aria-hidden="true"></i> Console</h4>
                  <a href="#" style={{textDecoration:"none",lineHeight:"2.5"}}>Understanding Mutual Funds </a><br/>
                  <a href="#" style={{textDecoration:"none",lineHeight:"2.5"}}>About Coin  </a><br/>
@@ -65,7 +65,7 @@ function CreateTicket() {
 
               </div>
 
-               <div className='col-4 p-5 mt-2 mb-2'>
+               <div className='col-12 col-sm-6 col-md-4 p-3 p-md-5 mt-2 mb-2'>
                 <h4 className=''> <i class="fa-regular fa-circle" aria-hidden="true"></i> Coin</h4>
                  <a href="#" style={{textDecoration:"none",lineHeight:"2.5"}}>Online Account Opening </a><br/>
                  <a href="#" style={{textDecoration:"none",lineHeight:"2.5"}}>Offine Account Opening </a><br/>

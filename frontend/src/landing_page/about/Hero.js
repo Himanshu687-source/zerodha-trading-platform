@@ -8,8 +8,8 @@ function Hero() {
                 <h1 className='fs-4 text-center'>We pioneered the discount broking model in India.<br /> Now, we are breaking ground with our technology.</h1>
             </div>
 
-            <div className='row p-5 mt-5 border-top text-muted ' style={{lineHeight:"1.8",fontSize:"1.1em"}}>
-                <div className='col-6 p-5'>
+            <div className='row p-2 p-md-5 mt-5 border-top text-muted ' style={{lineHeight:"1.8",fontSize:"1.1em"}}>
+                <div className='col-12 col-md-6 p-3 p-md-5'>
                     
                        <p> We kick-started operations on the 15th of August, 2010 with the goal of breaking all barriers that traders and investors face in India in terms of cost, support, and technology. We named the company Zerodha, a combination of Zero and "Rodha", the Sanskrit word for barrier.</p>
 
@@ -18,7 +18,7 @@ function Hero() {
                         <p>Over 1.6+ crore clients place billions of orders every year through our powerful ecosystem of investment platforms, contributing over 15% of all Indian retail trading volumes.</p>
                     
                 </div>
-                <div className='col-6 p-5'>
+                <div className='col-12 col-md-6 p-3 p-md-5'>
 
                       <p>In addition, we run a number of popular open online educational and community initiatives to empower retail traders and investors.</p>
 

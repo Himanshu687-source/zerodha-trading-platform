@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link} from "react-router-dom";
 import axios from "axios";
-// import { ToastContainer, toast } from "react-toastify";
-// import "../style.css"
+import "../signup/signup.css";
+
 const Login = () => {
   // const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({
@@ -58,8 +58,8 @@ const Login = () => {
   };
 
   return (
-    <div className='sig p-5' style={{height:"700px"}}>
-    <div style={{marginLeft:'550px'}} className="form_container mt-5">
+    <div className="signup-wrapper">
+      <div className="form_container">
       <h2>Login Account</h2>
       <form onSubmit={handleSubmit}>
         <div>
